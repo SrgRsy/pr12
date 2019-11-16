@@ -1,6 +1,8 @@
 const cards =  require('../data/cards.json');
+const cardsRout = require('express').Router();
 
-routes.get('/cards',(req,res) =>{
+cardsRout.get('/cards',(req,res) =>{
   res.send(cards);
 });
 
+module.exports = cardsRout;
