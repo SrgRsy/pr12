@@ -141,9 +141,8 @@ class Api {
     const about = document.querySelector('.user-info__job');
     const avatar = document.querySelector('.user-info__photo');
 
-    fetch(`http://95.216.175.5/${group}/users/me`, {
+    fetch(`http://localhost:3000/users/7d8c010a1c97ca2654997a95`, {
       headers: {
-        authorization: `${auth}`
       }
     })
 
