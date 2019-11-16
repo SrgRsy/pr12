@@ -166,10 +166,9 @@ class Api {
   };
 
 
-  getArray(group, auth) {
-    fetch(`http://95.216.175.5/${group}/cards`, {
+  getArray() {
+    fetch(`http://localhost:3000/cards`, {
       headers: {
-        authorization: `${auth}`
       }
     })
       .then((res) => {
@@ -295,11 +294,11 @@ const valid = {
   notEmpty: 'Поле не должно быть пустым'
 }
 api.getUser(group, auth);
-api.getArray(group, auth);
+api.getArray();
 
 
 
-//создание карточки 
+//создание карточки
 cardButton.addEventListener('click', function () {
   new Card(formInputName.value, formInputLink.value);
 });
@@ -330,37 +329,3 @@ formEdit.addEventListener('input', function () {
 
 
 
-/**
- * Вот теперь пришла ваша работа, спасибо
- *
- * Надо поправить некоторые моменты в работе и отрефакторить немного+++
- * Из класса API необходимо убрать всю конфиденциальную информацию: IP, ключи и так далее +++
- *
- * Убрать все неиспользуемые переменные в скриптах++
- *
- * Все функции которые находятся вне класса спрятать в классы++
- *
- * Анонимные функции убрать в методы для возможности переиспользовать их+++
- *
- * класс API не отрабатывает ошибки сети (Uncaught (in promise) TypeError: Failed to fetch) +++
- *
- * В конце цепочки отсутствует  catch +++
- *
- * Жду Ваши исправления, большое спасибо )
- *
- * @koras
- *
- */
-
-
-
- 
-// Великий Мастер, огромное спасибо за терпение)))
-
-
-/**
- * 
- * Работа принимается 
- * 
- * 
- */
